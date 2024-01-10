@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"> <!-- Use a leading slash to indicate the root directory -->
+    <title>Responsive Input Form</title>
+</head>
+<body class="main">
+
+<div class="container">
+
+  <div class="searchbar">
+    <div class="search-container">
+        <form action="/" method="get">
+            <input type="text" class="search-bar" name="city" placeholder="Enter location...">
+            <button type="submit" class="search-button">Find Location</button>
+        </form>
+    </div>
+  </div>
+
+  <div class="locationtemp">
+    <h1><%= weather.city || "City" %></h1>
+  </div>
+
+  <div class="valuebox">
+    <div class="one">
+      <h1>Temperature</h1>
+      <h1><%= weather.temperature || "N/A" %> K</h1>
+    </div>
+
+    <div class="two">
+      <h1>Humidity</h1>
+      <h1><%= weather.humidity || "N/A" %>%</h1>
+    </div>
+
+    <div class="three">
+      <h1>Wind Speed</h1>
+      <h1><%= weather.windSpeed || "N/A" %> m/s</h1>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
